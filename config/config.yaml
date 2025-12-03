@@ -1,0 +1,44 @@
+# Cấu hình
+
+# Cấu hình bước thực thi
+execution:
+  skip_pdf_to_images: true # Bỏ qua bước chuyển PDF sang ảnh
+  skip_ocr_extraction: true # Bỏ qua bước OCR
+  skip_text_cleaning: false # Thực hiện làm sạch văn bản
+  skip_text_segmentation: false # Thực hiện phân đoạn
+
+# Đường dẫn file
+paths:
+  input_pdf: "input/noi_oan_thi_la_ma_nguyen_duc_dan.pdf"
+  output_images: "output/images"
+  raw_text: "output/raw_text.txt"
+  clean_text: "output/clean_text.txt"
+  segments: "output/segments.txt"
+
+# Cấu hình OCR
+ocr:
+  dpi: 300
+  language: "vie" # Tiếng Việt
+  tesseract_config: "--psm 6" # Page segmentation mode
+
+# Cấu hình làm sạch văn bản
+cleaning:
+  # Patterns cần loại bỏ (header/footer/watermark)
+  remove_patterns:
+    - '^\s*\d+\s*$' # Số trang đơn lẻ
+    - "^.*Nhà xuất bản.*$" # Thông tin NXB
+    - '^.*Trang\s+\d+.*$' # "Trang 12"
+    - 'http\S+|www\.\S+' # URL
+    - "Scanned by.*" # Watermark scan
+
+  # Unicode normalization
+  unicode_form: "NFC"
+
+  # Xử lý khoảng trắng
+  normalize_whitespace: true
+  max_consecutive_newlines: 2
+
+# Cấu hình phân đoạn
+segmentation:
+  method: "sentence" # "sentence" hoặc "paragraph"
+  min_sentence_length: 10 # Độ dài tối thiểu của câu

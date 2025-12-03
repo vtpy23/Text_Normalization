@@ -1,0 +1,38 @@
+2025-12-03 18:48:48,413 - src.utils - INFO - ============================================================
+2025-12-03 18:48:48,413 - src.utils - INFO - DAISY PART 2 - TEXT NORMALIZATION PIPELINE
+2025-12-03 18:48:48,413 - src.utils - INFO - ============================================================
+2025-12-03 18:48:48,413 - src.utils - INFO - 
+[BƯỚC 1] Đọc file cấu hình...
+2025-12-03 18:48:48,435 - src.utils - INFO - 
+[BƯỚC 2] ⏭️  BỎ QUA - Chuyển đổi PDF sang ảnh (đã có sẵn)
+2025-12-03 18:48:48,442 - src.utils - INFO -   Sử dụng 265 ảnh có sẵn
+2025-12-03 18:48:48,443 - src.utils - INFO - 
+[BƯỚC 3] ⏭️  BỎ QUA - Trích xuất văn bản bằng OCR (đã có sẵn)
+2025-12-03 18:48:48,466 - src.utils - INFO -   Đã load văn bản gốc: 319175 ký tự
+2025-12-03 18:48:48,466 - src.utils - INFO - 
+[BƯỚC 4] 🔄 Làm sạch và chuẩn hóa văn bản...
+2025-12-03 18:48:48,467 - src.utils - INFO - === BẮT ĐẦU QUY TRÌNH LÀM SẠCH VĂN BẢN ===
+2025-12-03 18:48:48,467 - src.utils - INFO - Loại bỏ header, footer, số trang...
+2025-12-03 18:48:48,498 - src.utils - INFO - Loại bỏ ký tự đặc biệt...
+2025-12-03 18:48:48,498 - src.utils - INFO - Chuẩn hóa Unicode theo form NFC...
+2025-12-03 18:48:48,498 - src.utils - INFO - Chuẩn hóa khoảng trắng...
+2025-12-03 18:48:48,524 - src.utils - INFO - === HOÀN THÀNH LÀM SẠCH VĂN BẢN ===
+2025-12-03 18:48:48,524 - src.utils - INFO - Độ dài văn bản sau khi làm sạch: 317410 ký tự
+2025-12-03 18:48:48,526 - src.utils - INFO - Đã lưu văn bản chuẩn hóa: output/clean_text.txt
+2025-12-03 18:48:48,526 - src.utils - INFO - 
+[BƯỚC 5] 🔄 Phân đoạn văn bản...
+2025-12-03 18:48:48,526 - src.utils - INFO - Phân đoạn văn bản theo câu...
+2025-12-03 18:48:48,529 - src.utils - INFO - Đã chia thành 3158 câu
+2025-12-03 18:48:48,529 - src.utils - INFO - Lưu 3158 đoạn vào file: output/segments.txt
+2025-12-03 18:48:48,532 - src.utils - INFO - 
+============================================================
+2025-12-03 18:48:48,532 - src.utils - INFO - ✅ HOÀN THÀNH QUY TRÌNH!
+2025-12-03 18:48:48,532 - src.utils - INFO - ============================================================
+2025-12-03 18:48:48,535 - src.utils - INFO - ✓ Văn bản gốc: 319,175 ký tự
+2025-12-03 18:48:48,554 - src.utils - INFO - ✓ Văn bản chuẩn hóa: 317,410 ký tự
+2025-12-03 18:48:48,573 - src.utils - INFO - ✓ Số đoạn phân tách: 8,970
+2025-12-03 18:48:48,573 - src.utils - INFO - 
+File đầu ra:
+2025-12-03 18:48:48,573 - src.utils - INFO -   - output/raw_text.txt
+2025-12-03 18:48:48,573 - src.utils - INFO -   - output/clean_text.txt
+2025-12-03 18:48:48,573 - src.utils - INFO -   - output/segments.txt
